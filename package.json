@@ -1,0 +1,28 @@
+{
+    "name": "efecommerce",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mefe-aydin/efe-commerce.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mefe-aydin/efe-commerce/issues"
+    },
+    "homepage": "https://github.com/mefe-aydin/efe-commerce#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.30.0",
+        "eslint-plugin-react": "^7.24.0",
+        "nodemon": "^2.0.9"
+    }
+}

@@ -9,9 +9,12 @@ import SigninScreen from "./secreens/SigninScreen";
 import { signout } from "./actions/userActions";
 import RegisterScreen from "./secreens/RegisterScreen";
 import ShippingAddressScreen from "./secreens/ShippingAddressScreen";
-import PaymentMethodSecreen from "./secreens/PaymentMethodSecreen";
+import PaymentMethodSecreen from "./secreens/PaymentMethodScreen";
 import PlaceOrderScreen from "./secreens/PlaceOrderScreen";
 import OrderScreen from "./secreens/OrderScreen";
+import OrderHistoryScreen from "./secreens/OrderHistoryScreen";
+import ProfileScreen from "./secreens/ProfileScreen";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -45,6 +48,12 @@ function App() {
                   {userInfo.name} <i className="fa fa-caret-down"> </i>
                 </Link>
                 <ul className="dropdown-content">
+                  <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderhistory">Order History</Link>
+                  </li>
                   <Link to="signout" onClick={signoutHandler}>
                     Sign Out
                   </Link>
@@ -64,6 +73,11 @@ function App() {
           <Route path="/payment" component={PaymentMethodSecreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
+          <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <PrivateRoute
+            path="/profile"
+            component={ProfileScreen}
+          ></PrivateRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center"> All right reserved </footer>

@@ -8,6 +8,8 @@ npm start
 
 ```
 ## Run Frontend
+```
 cd frontend
 npm install
 npm start
+```

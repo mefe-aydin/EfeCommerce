@@ -1,4 +1,5 @@
 # EfeCommerce
+this project is developed using react and node
 
 ## Run Backend
 ```
